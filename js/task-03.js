@@ -14,7 +14,7 @@ const images = [
 ];
 
 
-const imagesContainer = document.getElementsByClassName('gallery');
+const imagesContainer = document.querySelector('.gallery');
 
 console.log(imagesContainer);
 
