@@ -7,13 +7,20 @@ const ingredients = [
   'Condiments',
 ];
 
-const ingredientsList = document.getElementById('ingredients');
-const liCreate = document.createElement('li');
+const ingredientsContainer = document.getElementById('ingredients');
 
-const addIngredientToList = () => {
-  ingredients.forEach(element => {
-    ingredientsList.append(liCreate.innerText = element);
+const createListItem = text => {
+  const li = document.createElement('li');
+  li.innerText = text;
+  return li;
+};
+
+const addIngredientsToList = () => {
+  ingredients.forEach(ingredient => {
+    const li = createListItem(ingredient);
+    li.classList.add('item');
+    ingredientsContainer.appendChild(li);
   });
-}
+};
 
-addIngredientToList();
+addIngredientsToList();
