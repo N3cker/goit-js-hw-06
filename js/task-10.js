@@ -30,7 +30,6 @@ const destroyElements = () => {
 }
 
 document.querySelector('[data-create]').addEventListener('click', () => {
-  console.log('create');
   const inputValue = document.querySelector('input').value;
   createElements(inputValue);
 })
